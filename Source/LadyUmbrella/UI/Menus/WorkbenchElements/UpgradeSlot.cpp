@@ -95,11 +95,6 @@ void UUpgradeSlot::ResetProgressBar()
 	}
 }
 
-void UUpgradeSlot::SetUpgradeId(const int UpgradeIdentifier)
-{
-	UpgradeId = UpgradeIdentifier;
-}
-
 void UUpgradeSlot::SetPercentToBar(const int32 UpgradeIdentifier)
 {
 	// Remove. Should be checked from outside

@@ -31,7 +31,7 @@ public:
 	 */
 	void SetupUpgradeSlots(const TPair<EUpgradeType, FUpgrade>& UpgradeToShow);
 
-	FORCEINLINE void SetUpgradeId(const int UpgradeIdentifier);
+	FORCEINLINE void SetUpgradeId(const int32 UpgradeIdentifier){ UpgradeId = UpgradeIdentifier;};
 	
 	ProgressBarEndedDelegate ProgressEndedDelegate;
 	

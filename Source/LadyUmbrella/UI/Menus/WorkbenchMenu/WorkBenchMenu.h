@@ -76,10 +76,10 @@ class LADYUMBRELLA_API UWorkBenchMenu : public UMenu
 public:
 	
 	void SetPiecesElement(const int32 NewPieces) const;
+
 	/*
 	 * Retrieves the Umbrella Upgrade Component and creates UUpgradeSlot widgets with their info
 	 */
-
 	void ReadUmbrellaUpgrades(const TMap<EUpgradeType, FUpgrade>& Upgrades);
 	//void ReadUmbrellaUpgrades(const UUpgradeComponent& CurrentUpgrades);
 

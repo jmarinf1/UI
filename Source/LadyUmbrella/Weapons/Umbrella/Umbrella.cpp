@@ -9,7 +9,6 @@
 #include "Umbrella.h"
 
 #include "CableComponent.h"
-#include "InterchangeResult.h"
 #include "NiagaraComponent.h"
 #include "UpgradeComponent/UpgradeComponent.h"
 #include "Camera/CameraComponent.h"
@@ -20,7 +19,6 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
-#include "LadyUmbrella/Characters/Enemies/EnemyCharacter.h"
 #include "LadyUmbrella/Interfaces/HitReactiveInterface.h"
 #include "LadyUmbrella/Interfaces/HookInterface.h"
 #include "LadyUmbrella/Weapons/GenericProjectile.h"
@@ -241,10 +239,6 @@ void AUmbrella::Tick(float DeltaTime)
 		if (GrappleStartTimeline->IsPlaying())
 		{
 			GrappleStartTimeline->Stop();
-		}
-		if (AEnemyCharacter* Character = Cast<AEnemyCharacter>(GrappleHitActor))
-		{
-			Character->EndGrapplingPosition();
 		}
 		ResetGrapple();
 	}

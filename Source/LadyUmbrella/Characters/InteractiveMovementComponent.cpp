@@ -10,8 +10,9 @@
 
 #include "EngineUtils.h"
 #include "GenericCharacter.h"
-#include "Enemies/EnemyCharacter.h"
+
 #include "LadyUmbrella/Interfaces/InteractiveMovement.h"
+#include "LadyUmbrella/Interfaces/KickInterface.h"
 #include "LadyUmbrella/Util/Logger.h"
 
 // Sets default values for this component's properties

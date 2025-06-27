@@ -11,7 +11,6 @@
 #include "Components/SphereComponent.h"
 #include "Components/WidgetComponent.h"
 #include "Kismet/GameplayStatics.h"
-#include "LadyUmbrella/AI/Managers/AISpawnPoint.h"
 #include "LadyUmbrella/Characters/Player/PlayerCharacter.h"
 #include "LadyUmbrella/UI/Basics/InteractiveIcon.h"
 #include "LadyUmbrella/Util/Logger.h"

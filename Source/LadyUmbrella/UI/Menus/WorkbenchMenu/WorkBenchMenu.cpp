@@ -33,7 +33,7 @@ void UWorkBenchMenu::SetPiecesElement(const int32 NewPieces) const
 
 void UWorkBenchMenu::ReadUmbrellaUpgrades(const TMap<EUpgradeType, FUpgrade>& Upgrades)
 {
-	int ID = 0;
+	int32 ID = 0;
 
 	for (auto It = Upgrades.CreateConstIterator(); It; ++It, ++ID)
 	{
@@ -82,7 +82,7 @@ void UWorkBenchMenu::OnUpgradePressed(const int32 UpgradePressed, const int32 Cu
 				FUpgrade* Upgrade  = UpgradeComponent->Upgrades.Find(static_cast<EUpgradeType>(UpgradePressed));
 				int32 UpgradePrice = Upgrade->GetPrice();
 				// La mejora del widget tiene que ser inferior al max level del component
-				if (UpgradePrice  < PiecesOfThePlayer && CurrentUpgrade < Upgrade->GetMaxLevel() )
+				if (UpgradePrice <= PiecesOfThePlayer && CurrentUpgrade < Upgrade->GetMaxLevel() )
 				{
 					if (IsValid(UpgradeSlotArray[UpgradePressed]))
 					{

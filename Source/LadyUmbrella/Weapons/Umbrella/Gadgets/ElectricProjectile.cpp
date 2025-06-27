@@ -3,7 +3,7 @@
 #include "Components/SphereComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "LadyUmbrella/Characters/GenericCharacter.h"
-#include "LadyUmbrella/Characters/Enemies/EnemyCharacter.h"
+
 #include "LadyUmbrella/Weapons/Umbrella/Umbrella.h"
 
 
@@ -57,15 +57,6 @@ void AElectricProjectile::ProcessCollision(UPrimitiveComponent* OverlappedCompon
 {
 	if (OtherActor && !OtherActor->ActorHasTag(FName("AgencyShield")))
 	{
-		if (OtherActor->IsA(AUmbrella::StaticClass()) && Owner.IsA(AEnemyCharacter::StaticClass()))
-		{
-			Cast<AUmbrella>(OtherActor)->SubtractHealth(DamageToUmbrella,EWeaponType::ElectricProjectil);
-		}
-		if (OtherActor->IsA(AGenericCharacter::StaticClass()))
-		{
-			Cast<AGenericCharacter>(OtherActor)->SetElectrified(true);
-		}
-        
 		//Destroy
 		this->Destroy();
 	}
