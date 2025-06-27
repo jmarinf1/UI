@@ -38,7 +38,7 @@ public:
 	UFUNCTION()
 	void SetPercentToBar(const int32 UpgradeIdentifier);
 
-	FORCEINLINE int32 GetCurrentLevel() const{ return CurrentLevel; };	
+	FORCEINLINE int32 GetCurrentLevel() const { return CurrentLevel; }
 
 private:
 
